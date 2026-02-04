@@ -23,12 +23,12 @@ logger = logging.getLogger(__name__)
 API_BASE_URL = "https://api.gapgpt.app/v1"
 API_KEY = "sk-NQIf9DDM88vlR7to5iys8BFQYwlHTvbtKZeVlwMawdEMOk61"
 
-# Initialize OpenAI client
-client = OpenAI(base_url=API_BASE_URL, api_key=API_KEY)
+# Initialize OpenAI client with a timeout to avoid hanging requests
+client = OpenAI(base_url=API_BASE_URL, api_key=API_KEY, timeout=30.0)
 
 # Model names
 DEEPSEEK_MODEL = "deepseek-chat"
-WHISPER_MODEL = "gapgpt/whisper-1"
+WHISPER_MODEL = "whisper-1"
 
 
 def assess_writing(topic: str, text_body: str, word_count: int) -> Dict[str, Any]:

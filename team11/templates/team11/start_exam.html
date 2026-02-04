@@ -18,7 +18,6 @@
 
       <div class="header-right">
         <div class="flag-settings">
-          <img src="{% static 'team11/public/images/settings.png' %}" alt="" class="settings-icon">
           <div class="iran-flag">
             <div class="flag-green"></div>
             <div class="flag-white"></div>
@@ -53,8 +52,8 @@
             <a href="{% url 'team11_writing_exam' %}?category={{ category.category_id }}" 
                class="topic-card" 
                style="background: var(--bg-cream); padding: 20px; border-radius: 10px; text-decoration: none; color: var(--navy); border: 2px solid transparent; transition: all 0.3s;">
-              <div style="font-weight: bold; margin-bottom: 5px;">{{ category.name }}</div>
-              <div style="color: var(--dark-blue); font-size: 0.9em;">{{ category.description }}</div>
+              <div style="font-weight: bold; margin-bottom: 5px; text-align: center;">{{ category.name }}</div>
+              <div style="color: var(--dark-blue); font-size: 0.9em; direction: ltr; text-align: center;">{{ category.description }}</div>
             </a>
             {% empty %}
             <div style="text-align: center; color: var(--dark-blue); padding: 20px;">
@@ -64,9 +63,9 @@
           </div>
         </div>
 
-        <!-- Listening Exam Section -->
+        <!-- Speaking Exam Section -->
         <div class="exam-section" style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-          <h2 style="color: var(--navy); margin-bottom: 20px; text-align: center;">آزمون گوش دادن (اسپیکینگ)</h2>
+          <h2 style="color: var(--navy); margin-bottom: 20px; text-align: center;">آزمون صحبت کردن</h2>
           <p style="color: var(--dark-blue); margin-bottom: 30px; text-align: center;">یکی از موضوعات زیر را انتخاب کنید:</p>
           
           <div class="topic-list" style="display: flex; flex-direction: column; gap: 15px;">
@@ -74,8 +73,8 @@
             <a href="{% url 'team11_listening_exam' %}?category={{ category.category_id }}" 
                class="topic-card" 
                style="background: var(--bg-cream); padding: 20px; border-radius: 10px; text-decoration: none; color: var(--navy); border: 2px solid transparent; transition: all 0.3s;">
-              <div style="font-weight: bold; margin-bottom: 5px;">{{ category.name }}</div>
-              <div style="color: var(--dark-blue); font-size: 0.9em;">{{ category.description }}</div>
+              <div style="font-weight: bold; margin-bottom: 5px; text-align: center;">{{ category.name }}</div>
+              <div style="color: var(--dark-blue); font-size: 0.9em; direction: ltr; text-align: center;">{{ category.description }}</div>
             </a>
             {% empty %}
             <div style="text-align: center; color: var(--dark-blue); padding: 20px;">
