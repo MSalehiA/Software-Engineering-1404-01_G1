@@ -35,7 +35,7 @@ docker compose up --build -d
 docker compose exec core python manage.py migrate --database=team15
 
 # 6) Seed team15 mock data
-docker compose exec core python manage.py load_mock_data --clear
+docker compose exec core python manage.py load_team15_mock_data --clear
 ```
 
 Open:
@@ -61,7 +61,7 @@ python manage.py migrate
 python manage.py migrate --database=team15
 
 # Load sample data
-python manage.py load_mock_data --clear
+python manage.py load_team15_mock_data --clear
 
 # Start server
 python manage.py runserver
@@ -407,4 +407,4 @@ All errors follow this format:
 | 2 | TOEFL Reading Exam Simulation 1 | exam     | 36 min     | 2        | 10        |
 | 3 | TOEFL Reading Practice Test 2   | practice | none       | 1        | 4         |
 
-Reload mock data: `python manage.py load_mock_data --clear`
+Reload mock data: `python manage.py load_team15_mock_data --clear`

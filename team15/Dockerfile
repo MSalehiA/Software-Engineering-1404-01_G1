@@ -16,4 +16,4 @@ COPY . /app/
 
 EXPOSE 8000
 
-CMD ["bash", "-lc", "python manage.py migrate && python manage.py migrate --database=team15 && python manage.py load_mock_data && python manage.py collectstatic --noinput && gunicorn app404.wsgi:application -b 0.0.0.0:8000"]
+CMD ["bash", "-lc", "python manage.py migrate && python manage.py migrate --database=team15 && python manage.py load_team15_mock_data && python manage.py collectstatic --noinput && gunicorn app404.wsgi:application -b 0.0.0.0:8000"]
